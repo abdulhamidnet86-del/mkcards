@@ -1,0 +1,42 @@
+/* app.css - basic theme and professional effects */
+:root{
+  --blue:#0b7285; /* primary */
+  --light-blue:#2aa4a8;
+  --red:#c0392b;
+  --white:#ffffff;
+  --muted:#f4f7f9;
+  --card-shadow: 0 6px 18px rgba(11,114,133,0.12);
+  --glass: rgba(255,255,255,0.6);
+}
+
+*{box-sizing:border-box;font-family:'Cairo', sans-serif}
+body{background:linear-gradient(180deg,#f5f8fb 0%, #ffffff 100%);margin:0;padding:0;color:#30363d}
+.app-container{max-width:1000px;margin:24px auto;padding:16px}
+.topbar{display:flex;justify-content:space-between;align-items:center;padding:12px;border-radius:12px;background:linear-gradient(90deg,var(--blue),var(--light-blue));color:var(--white);box-shadow:var(--card-shadow)}
+.topbar .brand{font-weight:700}
+.topbar .status{background:var(--white);color:var(--blue);padding:4px 8px;border-radius:999px;font-weight:600}
+
+.router-card{background:var(--white);border-radius:14px;padding:18px;margin-top:18px;box-shadow:var(--card-shadow);border:1px solid rgba(11,114,133,0.06)}
+.router-header{display:flex;justify-content:space-between;align-items:center}
+.router-ip{font-weight:700;font-size:18px}
+.router-stats{display:flex;gap:12px;margin-top:12px}
+.stat{background:linear-gradient(180deg,#fff,#f8fbfc);padding:10px;border-radius:10px;flex:1;text-align:center;border:1px solid rgba(16,185,129,0.06)}
+
+.services{margin-top:22px}
+.services h3{margin:0 0 12px 0}
+.cards-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.card{padding:18px;border-radius:12px;background:linear-gradient(180deg,#ffffff,#f7fbfd);box-shadow:var(--card-shadow);text-align:center;border:1px solid rgba(3,105,118,0.04)}
+.card.red{background:linear-gradient(180deg,#ffecec,#fff3f3);border-color:rgba(192,57,43,0.06);color:var(--red)}
+.card.teal{background:linear-gradient(180deg,#e8f9f9,#f6ffff);color:var(--blue)}
+.card.blue{background:linear-gradient(180deg,#eaf6fb,#f7fcff);color:var(--blue)}
+.card.light{background:linear-gradient(180deg,#fff7ed,#fffdfb);border-color:rgba(245,183,77,0.06)}
+
+.bottom-nav{position:fixed;left:0;right:0;bottom:16px;margin:auto;max-width:600px;background:var(--white);display:flex;justify-content:space-between;padding:12px;border-radius:999px;box-shadow:0 10px 30px rgba(0,0,0,0.08)}
+.nav-item{color:#6b7280;padding:8px 12px}
+.nav-action{background:var(--blue);color:var(--white);border-radius:999px;padding:12px 16px;font-weight:700}
+
+.footer{margin-top:36px;text-align:center;color:#9aa3ab}
+
+/* responsive */
+@media(max-width:800px){.cards-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:480px){.cards-grid{grid-template-columns:1fr}}
